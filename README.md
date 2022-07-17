@@ -40,3 +40,29 @@ Or for a circuit schematic, check out [docs/Diagram.pdf](docs/Diagram.pdf).
 ## How To Use
 
 When a button on the gamepad is pressed, the Arduino will send data through the serial port which can also be read from on your PC. This is where you come in. While this gamepad was intended as a fun weekend project to experiment with Unity, you can use this for all sorts of projects.
+
+Here is an example of reading input from the gamepad:
+
+```python
+import serial
+
+port = serial.Serial(
+    port="COM7",
+    baudrate=9600,
+    bytesize=8,
+    timeout=5,
+    stopbits=serial.STOPBITS_ONE
+)
+
+while True:
+    if port.in_waiting > 0:
+        data = port.read(size=1).decode("Ascii")
+
+        if data == "R":
+            print("Moving Right!")
+        elif data == "L":
+            print("Moving Left!")
+        elif data == "J":
+            print("Jump!!!")
+
+```
