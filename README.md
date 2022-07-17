@@ -13,7 +13,7 @@ For this project, I used the PlatformIO CLI and VS Code extension as opposed to 
 
 ### PlatformIO
 
-If you have PlatformIO installed, all you need to do to compile the code is run `make`, and to upload, `make clean`. You could also just use the buttons PlatformIO provides, but I prefer using a Makefile.
+If you have PlatformIO installed, all you need to do to compile the code is run `make`, and to upload, `make upload`. You could also just use the buttons PlatformIO provides, but I prefer using a Makefile.
 
 ### Arduino IDE
 
