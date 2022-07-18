@@ -2,8 +2,8 @@
 #include <Arduino.h>
 using namespace GamePad;
 
-// Tells the button which pin is assigned to it.
-// If an invalid pin is passed, it will default to LEFT.
+// Tells the button which pin and action are assigned to it.
+// If an invalid action is passed, it will default to LEFT.
 Button::Button(ButtonAction action, uint pin) : action(action), pin(pin)
 {
     pinMode(pin, INPUT);
